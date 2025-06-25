@@ -1,0 +1,1 @@
+The purpose of this project is to manipulate C-Style strings. We will do so by making functions that check and count different aspects of the string as well as changing the case of the characters. 
