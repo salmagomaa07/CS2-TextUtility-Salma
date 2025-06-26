@@ -5,12 +5,23 @@
 using namespace std;
 
 
-#include <iostream>
-#include <cctype>
-#include <cstring>
-#include "text_utility.h"
-using namespace std;
 
+void VowelConsonantCount(char* str, int& vowels, int& consonants){
+    
+    vowels = 0;
+    consonants =0;
+     for (int i = 0; str[i] != '\0'; i++) {
+        char ch = tolower(str[i]); 
+        
+        if (isalpha(ch)){
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                vowels++;
+            else
+                consonants++;
+        }
+     }
+
+}
 
 int countwords(char* str) {
     
