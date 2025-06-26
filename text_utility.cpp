@@ -4,6 +4,23 @@
 #include "text_utility.h"
 using namespace std;
 
+bool isPalindrome(char* str) {
+    int left = 0;
+    int right = strlen(str) - 1;
+
+    while (left < right) {
+
+        if (tolower(str[left]) != tolower(str[right])) {
+            return false;
+        }
+
+        left++;
+        right--;
+    }
+
+    return true;
+}
+
 void reverseString(char* str) {
     int start = 0;
     int end = strlen(str) - 1; 
