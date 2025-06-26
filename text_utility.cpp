@@ -23,3 +23,26 @@ void toLowercase(char* str) {
         str[i] = tolower(str[i]);
     }
 }
+
+int countSubstringOccurrences(char* str, char* sub) {
+    int count = 0;
+    int lenStr = strlen(str);
+    int lenSub = strlen(sub);
+
+    if (lenSub == 0 || lenSub > lenStr)
+        return 0;
+
+    for (int i = 0; i <= lenStr - lenSub; i++) {
+        bool match = true;
+        for (int j = 0; j < lenSub; j++) {
+            if (str[i + j] != sub[j]) {
+                match = false;
+                break;
+            }
+        }
+        if (match)
+            count++;
+    }
+
+    return count;
+}
